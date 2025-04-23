@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+.github/workflows/github_to_itch.yml
+.github/workflows/check_lint.yml
+.github/workflows/check_format.yml
