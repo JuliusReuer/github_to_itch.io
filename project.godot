@@ -8,8 +8,27 @@
 
 config_version=5
 
+=false
+f=false
+
 [application]
 
 config/name="github_to_itch.io"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/github_to_itch.io/plugin.cfg")
+
+[github_to_itch.io]
+
+config/github_to_itch_io/enabled=true
+config/github_to_itch_io/itch_username="test_user"
+config/github_to_itch_io/itch_project_name="test"
+config/discord/enabled=true
+config/linting_check/enabled=true
+config/linting_check/folder="res://exports"
+config/format_check/enabled=true
+config/format_check/folder="res://exports"
+config/show_welcome=false
