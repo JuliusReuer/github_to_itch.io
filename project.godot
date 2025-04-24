@@ -8,14 +8,13 @@
 
 config_version=5
 
-=false
 f=false
 
 [application]
 
 config/name="github_to_itch.io"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://crw0qdromusf8"
 
 [editor_plugins]
 
