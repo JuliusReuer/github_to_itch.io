@@ -1,13 +1,11 @@
 <div align="center">
-
-## ⚠️ Disclaimer
-
-This project is heavily inspired by [MeagherGames](https://github.com/MeagherGames/) and their fantastic [Github To Itch](https://github.com/MeagherGames/github_to_itch) project. Huge thanks to them!
-<br>
-<br>
-<img src="./icon.svg" width=64 align="center"/>
-
-# Github to itch.io 🚀
+  <h2>⚠️ Disclaimer</h2>
+  <h4>This project is heavily inspired by <a href="https://github.com/MeagherGames/">MeagherGames</a> and their fantastic <a href="https://github.com/MeagherGames/github_to_itch">Github To Itch</a> project. Huge thanks to them!
+   </h4>
+  <br/>
+  <br/>
+  <img src="./icon.svg" width=128 align="center"/>
+  <h1>Github to itch.io 🚀</h3>
 </div>
 
 This addon automatically creates a GitHub Actions workflow to publish your game directly to your [itch.io](https://itch.io) project. Perfect for game jams or rapid iteration—get your playable builds online within minutes of pushing to GitHub!
