@@ -1,4 +1,4 @@
-# Github to itch.io 🚀
+<h1 align="center"> Github to itch.io 🚀 <img src="./icon.svg" width=64 align="center"/></h1>
 
 This addon automatically creates a GitHub Actions workflow to publish your game directly to your [itch.io](https://itch.io) project. Perfect for game jams or rapid iteration—get your playable builds online within minutes of pushing to GitHub!
 
