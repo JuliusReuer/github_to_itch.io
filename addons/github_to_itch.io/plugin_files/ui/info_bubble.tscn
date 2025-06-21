@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bk128k0tftsey"]
 
-[ext_resource type="Script" uid="uid://bhprbg2cw7i1d" path="res://addons/github_to_itch/ui/info_bubble.gd" id="1_jn1gk"]
+[ext_resource type="Script" uid="uid://bhprbg2cw7i1d" path="res://addons/github_to_itch.io/plugin_files/ui/info_bubble.gd" id="1_jn1gk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hn3d"]
 bg_color = Color(0.262745, 0.262745, 0.262745, 1)

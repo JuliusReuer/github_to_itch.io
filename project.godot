@@ -13,6 +13,7 @@ f=false
 [application]
 
 config/name="github_to_itch.io"
+config/tags=PackedStringArray("plugin")
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://crw0qdromusf8"
 

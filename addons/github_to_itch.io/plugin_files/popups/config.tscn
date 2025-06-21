@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cyjbd25tysr1t"]
+[gd_scene load_steps=12 format=3 uid="uid://cyjbd25tysr1t"]
 
-[ext_resource type="Theme" uid="uid://dm6n8hsk33uad" path="res://addons/github_to_itch.io/popups/Config_theme.tres" id="1_mowh0"]
-[ext_resource type="Script" uid="uid://biqqkikk0ood4" path="res://addons/github_to_itch.io/popups/config.gd" id="2_h6km3"]
-[ext_resource type="PackedScene" uid="uid://bk128k0tftsey" path="res://addons/github_to_itch.io/ui/info_bubble.tscn" id="3_5wgm5"]
-[ext_resource type="Script" uid="uid://xaltk4u4f7hj" path="res://addons/github_to_itch.io/ui/show_checkbox.gd" id="3_ec0wx"]
-[ext_resource type="PackedScene" uid="uid://bamdvnkuseoob" path="res://addons/github_to_itch.io/options_descriptions/Github_to_Itch.io.tscn" id="4_h6km3"]
-[ext_resource type="Script" uid="uid://8dgx1ey5dh17" path="res://addons/github_to_itch.io/ui/PickFolderButton.gd" id="6_ec0wx"]
-[ext_resource type="PackedScene" uid="uid://clx80gpvxn0fh" path="res://addons/github_to_itch.io/options_descriptions/Discord.tscn" id="6_ogijj"]
+[ext_resource type="Theme" uid="uid://dm6n8hsk33uad" path="res://addons/github_to_itch.io/plugin_files/popups/Config_theme.tres" id="1_mowh0"]
+[ext_resource type="Script" uid="uid://biqqkikk0ood4" path="res://addons/github_to_itch.io/plugin_files/popups/config.gd" id="2_h6km3"]
+[ext_resource type="PackedScene" uid="uid://bk128k0tftsey" path="res://addons/github_to_itch.io/plugin_files/ui/info_bubble.tscn" id="3_5wgm5"]
+[ext_resource type="Script" uid="uid://xaltk4u4f7hj" path="res://addons/github_to_itch.io/plugin_files/ui/show_checkbox.gd" id="3_ec0wx"]
+[ext_resource type="PackedScene" uid="uid://bamdvnkuseoob" path="res://addons/github_to_itch.io/plugin_files/options_descriptions/Github_to_Itch.io.tscn" id="4_h6km3"]
+[ext_resource type="Script" uid="uid://8dgx1ey5dh17" path="res://addons/github_to_itch.io/plugin_files/ui/PickFolderButton.gd" id="6_ec0wx"]
+[ext_resource type="PackedScene" uid="uid://clx80gpvxn0fh" path="res://addons/github_to_itch.io/plugin_files/options_descriptions/Discord.tscn" id="6_ogijj"]
+[ext_resource type="PackedScene" uid="uid://bkmf17wyet4fc" path="res://addons/github_to_itch.io/plugin_files/options_descriptions/Format Checking.tscn" id="8_5vakb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hg5dg"]
 bg_color = Color(0.205117, 0.205117, 0.205117, 1)
@@ -19,6 +20,7 @@ bg_color = Color(0.129559, 0.129558, 0.129558, 1)
 
 [node name="Control" type="Window"]
 disable_3d = true
+oversampling_override = 1.0
 title = "Github To Itch Config"
 initial_position = 2
 size = Vector2i(1000, 600)
@@ -52,6 +54,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 0
+button_pressed = true
 text = "Github to Itch.io"
 script = ExtResource("3_ec0wx")
 
@@ -87,6 +90,7 @@ vertical_alignment = 2
 [node name="Username" type="LineEdit" parent="PanelContainer/Config/Control/Github to Itch_io/MarginContainer2/VBoxContainer/ItchInfo/MarginContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+text = "test_user"
 placeholder_text = "username"
 expand_to_text_length = true
 
@@ -106,6 +110,7 @@ vertical_alignment = 2
 [node name="ProjectName" type="LineEdit" parent="PanelContainer/Config/Control/Github to Itch_io/MarginContainer2/VBoxContainer/ItchInfo/MarginContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+text = "test"
 placeholder_text = "project-name"
 expand_to_text_length = true
 
@@ -143,6 +148,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 0
+button_pressed = true
 text = "Discord"
 script = ExtResource("3_ec0wx")
 
@@ -168,10 +174,12 @@ layout_mode = 2
 
 [node name="CheckBox" type="CheckBox" parent="PanelContainer/Config/Control/Github to Itch_io/MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 text = "Help"
 script = ExtResource("3_ec0wx")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/Config/Control/Github to Itch_io/MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Discord" parent="PanelContainer/Config/Control/Github to Itch_io/MarginContainer2/VBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("6_ogijj")]
@@ -184,6 +192,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 0
+button_pressed = true
 text = "Lint Checking"
 script = ExtResource("3_ec0wx")
 
@@ -218,7 +227,7 @@ text = "Lint Folder: "
 [node name="Path" type="Label" parent="PanelContainer/Config/Control/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Path"
+text = "res://exports"
 
 [node name="Lint Pick Folder" type="Button" parent="PanelContainer/Config/Control/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("path_label", "dialog")]
 unique_name_in_owner = true
@@ -238,6 +247,7 @@ file_mode = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="PanelContainer/Config/Control/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Info"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "The path to the Folder you want to be Linted"
 
@@ -248,6 +258,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 0
+button_pressed = true
 text = "Format Checking"
 script = ExtResource("3_ec0wx")
 
@@ -282,7 +293,7 @@ text = "Format Folder: "
 [node name="Path" type="Label" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Path"
+text = "res://exports"
 
 [node name="Format Pick Folder" type="Button" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("path_label", "dialog")]
 unique_name_in_owner = true
@@ -306,6 +317,47 @@ layout_mode = 2
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "The path to the Folder you want to be Format Checked"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Line length:"
+
+[node name="SpinBox" type="SpinBox" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 500.0
+value = 100.0
+alignment = 2
+
+[node name="Info" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_5wgm5")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Info"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "The maximal line length the format checker shold check for."
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+text = "Help"
+script = ExtResource("3_ec0wx")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="FormatChecking" parent="PanelContainer/Config/Control/VBoxContainer2/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("8_5vakb")]
+layout_mode = 2
 
 [connection signal="text_changed" from="PanelContainer/Config/Control/Github to Itch_io/MarginContainer2/VBoxContainer/ItchInfo/MarginContainer/GridContainer/ProjectName" to="PanelContainer/Config" method="_on_project_name_text_changed"]
 [connection signal="toggled" from="PanelContainer/Config/Control/Github to Itch_io/MarginContainer2/VBoxContainer/VBoxContainer/Discord Enabled" to="PanelContainer/Config" method="_on_discord_enabled_toggled"]

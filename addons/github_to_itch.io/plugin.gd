@@ -1,8 +1,8 @@
 @tool
 extends EditorPlugin
 
-const WelcomePopup = preload("popups/welcome.tscn")
-const ConfigPopup = preload("popups/config.tscn")
+const WelcomePopup = preload("res://addons/github_to_itch.io/plugin_files/popups/welcome.tscn")
+const ConfigPopup = preload("res://addons/github_to_itch.io/plugin_files/popups/config.tscn")
 
 var base_workflow: WorkflowTemplate
 var discord_workflow: WorkflowTemplate

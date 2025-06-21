@@ -38,11 +38,17 @@ func get_yml_section_data(yml_string: String) -> Dictionary:
 	var lines = yml_string.split("\n")
 	var last_begin = 0
 	var begin_line = ""
+	var subsections = []
 	for line_id in len(lines):
 		var line = lines[line_id]
 		if line.is_empty():
 			continue
 		if line.begins_with(" ") or line.begins_with("\t") or line.begins_with("{"):
+			if line.substr(1).begins_with(" "):
+				pass
+				#print(line)
+			else:
+				print("SUB: ",line)
 			continue
 		if !begin_line.is_empty():
 			res.set(begin_line, {"begin": last_begin, "end": line_id})
@@ -68,6 +74,7 @@ func _extend(original: String, cwd: String) -> Dictionary[String,String]:
 
 	var orginal_sections = get_yml_section_data(original)
 	var template = get_yml_section_data(file_template)
+	print(template)
 	var orginal_text_sections: Dictionary[String,String] = {}
 	for key in orginal_sections:
 		if template.has(key):

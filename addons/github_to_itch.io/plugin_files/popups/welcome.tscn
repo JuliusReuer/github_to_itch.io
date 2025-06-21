@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dr2s2k75uwvi1"]
 
-[ext_resource type="Script" uid="uid://bj0x8gpptom03" path="res://addons/github_to_itch.io/popups/welcome.gd" id="1_7ix1l"]
-[ext_resource type="Theme" uid="uid://bpnof3v723c2p" path="res://addons/github_to_itch.io/popups/Welcome_theme.tres" id="2_jl2yu"]
-[ext_resource type="PackedScene" uid="uid://bamdvnkuseoob" path="res://addons/github_to_itch.io/options_descriptions/Github_to_Itch.io.tscn" id="3_xl7hu"]
-[ext_resource type="PackedScene" uid="uid://clx80gpvxn0fh" path="res://addons/github_to_itch.io/options_descriptions/Discord.tscn" id="4_vgdr7"]
-[ext_resource type="PackedScene" uid="uid://cbljkkktd82mn" path="res://addons/github_to_itch.io/options_descriptions/Lint Checking.tscn" id="5_0n4dt"]
-[ext_resource type="PackedScene" uid="uid://bkmf17wyet4fc" path="res://addons/github_to_itch.io/options_descriptions/Format Checking.tscn" id="6_keuoi"]
+[ext_resource type="Script" uid="uid://bj0x8gpptom03" path="res://addons/github_to_itch.io/plugin_files/popups/welcome.gd" id="1_7ix1l"]
+[ext_resource type="Theme" uid="uid://bpnof3v723c2p" path="res://addons/github_to_itch.io/plugin_files/popups/Welcome_theme.tres" id="2_jl2yu"]
+[ext_resource type="PackedScene" uid="uid://bamdvnkuseoob" path="res://addons/github_to_itch.io/plugin_files/options_descriptions/Github_to_Itch.io.tscn" id="3_xl7hu"]
+[ext_resource type="PackedScene" uid="uid://clx80gpvxn0fh" path="res://addons/github_to_itch.io/plugin_files/options_descriptions/Discord.tscn" id="4_vgdr7"]
+[ext_resource type="PackedScene" uid="uid://cbljkkktd82mn" path="res://addons/github_to_itch.io/plugin_files/options_descriptions/Lint Checking.tscn" id="5_0n4dt"]
+[ext_resource type="PackedScene" uid="uid://bkmf17wyet4fc" path="res://addons/github_to_itch.io/plugin_files/options_descriptions/Format Checking.tscn" id="6_keuoi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7ix1l"]
 font_size = 40

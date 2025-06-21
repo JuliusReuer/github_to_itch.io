@@ -1,4 +1,5 @@
 @tool
+class_name ShowCheckbox
 extends CheckBox
 
 
@@ -15,3 +16,6 @@ func toggle(on: bool):
 	for child: Control in children:
 		if child != self:
 			child.visible = on
+
+func update():
+	toggled.emit(button_pressed)

@@ -1,13 +1,13 @@
 @tool
 extends Window
 
-@onready var gitub_to_itchio: CheckBox = get_node("%Github to ItchIo Enabled")
+@onready var gitub_to_itchio: ShowCheckbox = get_node("%Github to ItchIo Enabled")
 @onready var itch_username: LineEdit = get_node("%Username")
 @onready var itch_project_name: LineEdit = get_node("%ProjectName")
-@onready var discord: CheckBox = get_node("%Discord Enabled")
-@onready var lint_enabled: CheckBox = get_node("%Lint Checking Enabled")
+@onready var discord: ShowCheckbox = get_node("%Discord Enabled")
+@onready var lint_enabled: ShowCheckbox = get_node("%Lint Checking Enabled")
 @onready var lint_folder: PickFolderButton = get_node("%Lint Pick Folder")
-@onready var format_enabled: CheckBox = get_node("%Format Checking Enabled")
+@onready var format_enabled: ShowCheckbox = get_node("%Format Checking Enabled")
 @onready var format_folder: PickFolderButton = get_node("%Format Pick Folder")
 
 
@@ -17,6 +17,7 @@ func _ready():
 	gitub_to_itchio.button_pressed = ProjectSettings.get_setting(
 		WorkflowSettingsManager.GITHUB_TO_ITCH_ENABLED, false
 	)
+	gitub_to_itchio.update()
 	itch_username.text = ProjectSettings.get_setting(
 		WorkflowSettingsManager.GITHUB_TO_ITCH_USER, ""
 	)
@@ -27,15 +28,17 @@ func _ready():
 	discord.button_pressed = ProjectSettings.get_setting(
 		WorkflowSettingsManager.DISCORD_ENABLED, false
 	)
-
+	discord.update()
 	lint_enabled.button_pressed = ProjectSettings.get_setting(
 		WorkflowSettingsManager.LINT_CHECK_ENABLED, false
 	)
+	lint_enabled.update()
 	lint_folder.set_path(ProjectSettings.get_setting(WorkflowSettingsManager.LINT_CHECK_FOLDER))
 
 	format_enabled.button_pressed = ProjectSettings.get_setting(
 		WorkflowSettingsManager.FORMAT_CHECK_ENABLED, false
 	)
+	format_enabled.update()
 	format_folder.set_path(ProjectSettings.get_setting(WorkflowSettingsManager.FORMAT_CHECK_FOLDER))
 
 	gitub_to_itchio.toggled.connect(_on_github_to_itch_io_enabled_toggled)
