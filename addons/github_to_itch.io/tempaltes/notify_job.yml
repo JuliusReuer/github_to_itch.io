@@ -2,6 +2,14 @@
 env:
  DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK}} # Needs to be added through github
 jobs:
+ Cleanup:
+  needs: [Export, Release, Publish, Notify]
+  runs-on: ubuntu-latest
+  steps:
+	- uses: geekyeggo/delete-artifact@v5
+	  with:
+	   name: VERSION
+
  Notify:
 	needs: [Export, Release, Publish]
 	if: ${{ always() }}
